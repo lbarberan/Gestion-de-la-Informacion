@@ -1,0 +1,16 @@
+Linea: [
+   {
+     Palabra:"Ahì",
+   },
+
+   {
+     Palabra:"va",
+   },
+   {
+     Palabra:"la",
+   },
+   {
+     Palabra:"bala",
+   },
+
+  ]
