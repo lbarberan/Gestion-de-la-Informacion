@@ -3,9 +3,10 @@ package tpmongodb.tp;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//import tp2mongo.linea;
+
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
-
 import com.mongodb.MapReduceCommand;
 import com.mongodb.DBObject;
 import com.mongodb.MapReduceCommand;
@@ -25,16 +26,18 @@ import com.mongodb.MapReduceCommand.OutputType;
 	    //Leer Archivo en Java
 	    leertexto a = new leertexto();
 	    
-	    String s1 = a.leerTxt("d:\\mismongos\\tp\\datainput\\donQuijote.txt");
-	        
+	    String s1 = a.leerTxt("d:\\mismongos\\datainput\\prueba.txt");
+	        //donQuijote.txt
 	    //obtengo cada palabra por posición 
 	    String[] colec = s1.split(" ");
 	        
 	    // recorro el array y formateo cada palabra entre comillas  
 	    for(int x=0;x<colec.length;x++) {
-	    	int cant =  colec[x].length()  ;
-			colec[x] = "\"" + colec[x] + "\""  ;
+	    	int cant =  colec[x].length();
+		//	colec[x] = "\"" + colec[x] + "\""  ;
 	    	palabras.add(new Palabra(colec[x],cant));
+	    	
+	    //	System.out.println(colec[x]);
 	    	          
 	        }
 	        
@@ -54,8 +57,12 @@ import com.mongodb.MapReduceCommand.OutputType;
 	  	for (Palabra pal : palabras)
 	  		colleccion.insert(pal.toDBObjectPalabra());
 	 
+	  	
+	  	
 	  	// mapReduce para saber la cantidad de palabras con igual longitud
-				
+	  	
+	  	  	
+ 
 	  	String	map = "function() { emit(this.palabra.length, 1);}";
 
 	  	
