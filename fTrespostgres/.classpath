@@ -32,6 +32,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/lidia/Downloads/postgresql-9.1-903.jdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lidia/Downloads/postgresql-9.1-903.jdbc4.jar" sourcepath="C:/Users/lidia/Downloads/postgresql-9.1-903.jdbc4.jar">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
